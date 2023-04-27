@@ -1,45 +1,27 @@
-1. Replace `<your_account>` with your Github username in the link
-    - [DEMO LINK](https://vasyliev-anton.github.io/js_2048_game/)
-2. Follow [this instructions](https://mate-academy.github.io/layout_task-guideline/)
-    - Run `npm run test` command to test your code;
-    - Run `npm run test:only -- -n` to run fast test ignoring linter;
-    - Run `npm run test:only -- -l` to run fast test with additional info in console ignoring linter.
+# [Demo](https://vasyliev-anton.github.io/js_2048_game/)
 
-### Task: 2048 game
+# The game employs a specific game logic:
+- The game field consists of 16 cells arranged in a 4 x 4 grid, but its size can be easily customized in the code.
+- Each cell can be either empty or contain a power of 2 number, from 2 up to 2^n.
+- At the start of the game, two random cells are filled with either 2 or 4.
+- The game is initiated by clicking the Start button, and the player can move the cells using the arrow keys.
+- When the player moves the cells, all the numbers are shifted in the selected direction until all empty cells are filled.
+- If two adjacent cells contain equal numbers, they merge into a single cell with their sum, provided that the merged cell has not already merged during the same move.
+- After each move, a new number (either 2 or 4) appears in a random empty cell, with a 10% probability of it being 4.
+- If the number 2048 is displayed in any cell, the game displays a win message.
+- If there are no more available moves, the game ends and shows a game over message.
+- The score increases by the sum of all merged cells, and the high score is saved in the local storage.
+- The game can be restarted at any time by clicking the Restart button.
 
-Hey! Are you ready for a real hard check of your JavaScript skills, ninja?
-If you are still here, let's do it.
+# Technologies used
 
-In this task, you need to implement the 2048 game like in [this reference](https://play2048.co/)
-Don't play for too long! We need you to write the code!
+- HTML5
+- CSS3
+- Sass (SCSS)
+- JavaScript
 
-Okay, what do we have?
-1) HTML and CSS are already written. You can use it, or implement your own design if you want.
-2) Reference.
+# General
 
-That's it!
-
-Okay, okay. Also, we have some rules:
-1) The game field is 4 x 4
-2) Each cell can be empty or contain one of the numbers: 2, 4, 8 ... 2^n
-3) The player can move cells with keyboard arrows
-4) All the numbers should be moved in the selected direction until all empty cells are filled in
-   - 2 equal cells should be merged into a doubled number
-   - The merged cell can’t be merged twice during one move
-5) The move is possible if at least one cell is changed after the move
-6) After move 2 or 4 appears in a random empty cell. 4 probability is 10%
-7) When 2048 value is displayed in any cell, win message should be shown.
-8) The `game over` message should be shown if there are no more available moves.
-9) Hide start message when game starts.
-10) Change the `Start` button to `Restart` after the first move.
-11) Increase score with each move. The score should be increased by the sum of all merged cells.
-
-Hints:
-- You have class `field-cell--%cell_value%`, for styling cell in the game.
-- Use `hidden` class for hiding elements on page.
-- Use `start`, `restart` classes for the main button for different styles.
-- Use `field-cell--%cell_value%` class like additional class, don't replace the main class.
-
-You can change the HTM/CSS layout if you need it.
+The primary purpose of this project was to practice JavaScript and DOM manipulations, as well as integrating JavaScript with HTML and CSS. The biggest task was the execution of the game logic. I needed to consider all feasible circumstances and how to apply them.
 
 ![Preview](./src/images/reference.png)
